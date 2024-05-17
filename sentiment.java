@@ -27,11 +27,7 @@ public class sentiment
 		driver.findElement(By.xpath("/html/body/header/nav/div/a/img")).click(); //Logo selection
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		//String page = driver.getPageSource();
-		String element = "www.sentiment-reviews.com";
-		js.executeScript("arguments[0].scrollIntoView();", element);
-//		WebElement element = driver.findElement(By.xpath("//*[@id=\"stores-landing\"]/div/div/div[4]/div/a"));
-//		js.executeScript("arguments[0].scrollIntoView();", element);
+		WebElement element = driver.findElement(By.xpath("//*[@id=\"stores-landing\"]/div/div/div[4]/div/a"));
 		
 		driver.findElement(By.xpath("//*[@id=\"stores-landing\"]/div/div/div[2]/div/div/ul/li[1]/a")).click(); //Google
 		Thread.sleep(3000);
@@ -55,7 +51,7 @@ public class sentiment
 		
 		driver.findElement(By.xpath("//*[@id=\"stores-landing\"]/div/div/div[4]/div/a")).click(); //Home link
 		
-		//js.executeScript("arguments[0].scrollIntoView();", element);
+		js.executeScript("arguments[0].scrollIntoView();", element);
 		Thread.sleep(3000);
 	}
 	
